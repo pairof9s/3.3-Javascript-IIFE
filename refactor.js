@@ -28,7 +28,8 @@ function doSomethingCool() {
 }
 
 // Put your answer below -------------------------
-
+var doSomethingCool = function () {
+  console.log("Something Cool!");
 
 // -----------------------------------------------
 
@@ -48,7 +49,11 @@ function sayHi() {
 setTimeout(sayHi, 2000);
 
 // Put your answer below -------------------------
+var sayHi = function() {
+  alert("Hello, World!");
+}
 
+setTimeout(sayHi, 2000);
 
 // -----------------------------------------------
 
@@ -78,7 +83,7 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
-
+[c]
 
 // -----------------------------------------------
 
@@ -100,7 +105,7 @@ var reverseStr = function(str) {
 };
 
 // Put your answer below -------------------------
-
+var reverseStr = function(str){str.split('').reverse().join('')};
 
 // -----------------------------------------------
 
@@ -134,8 +139,11 @@ var spanishColor = function(colorName) {
 };
 
 // Put your answer below -------------------------
+var spanishColor = {"rojo":"#ff0000", "blanco":"#ffffff", "azul":"#0000ff", "verde":"#00ff00", "negro":"#000000"};
 
-
+for (var prop in spanishColor) {
+  console.log("Spanish color: " + prop + " = " + spanishColor[prop]);
+};
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -151,7 +159,10 @@ var spanishColor = function(colorName) {
 var foo = "bar";
 
 // Put your answer below -------------------------
+var foo;
+foo = "bar";
 
+console.log(foo);
 
 // -----------------------------------------------
 
@@ -173,7 +184,14 @@ var callTenTimes = function(callback) {
 };
 
 // Put your answer below -------------------------
+var callNtimes = function(callback) {
+  var range = _.range('n');
+  _.each(range, callback);
+};
 
+var n = (5);
+
+console.log(callNtimes(n));
 
 // -----------------------------------------------
 

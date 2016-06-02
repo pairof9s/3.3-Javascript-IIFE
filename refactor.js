@@ -185,13 +185,13 @@ var callTenTimes = function(callback) {
 
 // Put your answer below -------------------------
 var callNtimes = function(callback) {
-  var range = _.range('n');
+  var range = _.range(x);
   _.each(range, callback);
 };
 
-var n = (5);
+var x = (5);
 
-console.log(callNtimes(n));
+console.log(callNtimes(x));
 
 // -----------------------------------------------
 
@@ -219,6 +219,15 @@ var decreaseScore = function() {
 };
 
 // Put your answer below -------------------------
+var score = [];
+
+var increaseScore = function() {
+  score[0]++;
+};
+
+var decreaseScore = function() {
+  score[0]--;
+};
 
 
 // -----------------------------------------------
@@ -239,8 +248,12 @@ var addNumbers = function(numberA, numberB) {
 var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
+var addNumbers = function(numberA, numberB) {
+  return (numberA + numberB);
+};
 
-
+var twoPlusTwo = addNumbers(2,2);
+console.log(numberA + numberB);
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -265,7 +278,11 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
+var speed = 0; //variable "amount" has not been given a value
 
+var accelerate = function(amount=1) {
+  speed += amount;
+};
 
 // -----------------------------------------------
 

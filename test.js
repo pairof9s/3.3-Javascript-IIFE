@@ -128,11 +128,17 @@
 //
 // console.log(reverseStr('dog'));
 
-var callNtimes = function(callback) {
-  var range = _.range('n');
-  _.each(range, callback);
+// var callNtimes = function(callback) {
+//   var range = _.range(x);
+//   _.each(range, callback);
+// };
+//
+// var x = (5);
+//
+// console.log(callNtimes(x));
+
+var speed = 0; //variable "amount" has not been given a value
+
+var accelerate = function(amount=1) {
+  speed += amount;
 };
-
-var n = (5);
-
-console.log(callNtimes(n));

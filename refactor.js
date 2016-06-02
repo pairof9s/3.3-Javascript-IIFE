@@ -179,19 +179,21 @@ console.log(foo);
 // function.
 
 var callTenTimes = function(callback) {
-  var range = _.range(10);
-  _.each(range, callback);
+  for(var i=1; i<=10; i++){
+    callback();
+  }
 };
 
 // Put your answer below -------------------------
-var callNtimes = function(callback) {
-  var range = _.range(x);
-  _.each(range, callback);
+var callNTimes = function(callback) {
+  for(var i=1; i<=callback.length; i++){
+    callback(x);
+  }
 };
 
 var x = (5);
 
-console.log(callNtimes(x));
+console.log(callNTimes(x));
 
 // -----------------------------------------------
 

@@ -137,8 +137,18 @@
 //
 // console.log(callNtimes(x));
 
-var speed = 0; //variable "amount" has not been given a value
+// var speed = 0; //variable "amount" has not been given a value
+//
+// var accelerate = function(amount=1) {
+//   speed += amount;
+// };
 
-var accelerate = function(amount=1) {
-  speed += amount;
+var callNTimes = function(callback) {
+  for(var i=1; i<=callback.length; i++){
+    callback(x);
+  }
 };
+
+var x = (5);
+
+console.log(callNTimes(x));

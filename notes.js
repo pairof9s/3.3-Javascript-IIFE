@@ -1,4 +1,5 @@
 // Refactor assignment notes from morning lecture
+// Scope v
 (function(){
 
   var score = 0;
@@ -21,6 +22,8 @@
 
 }());
 
+
+// function scope both global and within function
 var name = "John";
 
 (function() {

@@ -30,7 +30,7 @@ function doSomethingCool() {
 // Put your answer below -------------------------
 var doSomethingCool = function () {
   console.log("Something Cool!");
-
+};
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -51,7 +51,7 @@ setTimeout(sayHi, 2000);
 // Put your answer below -------------------------
 var sayHi = function() {
   alert("Hello, World!");
-}
+};
 
 setTimeout(sayHi, 2000);
 
@@ -83,7 +83,7 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
-[c]
+// [c]  The variable letter, once assigned the value "z" to replace "x", is hoisted above the function that preceeds. Thus console first logs the new var "z", then performs the function which then logs the new var "y".
 
 // -----------------------------------------------
 
@@ -105,7 +105,10 @@ var reverseStr = function(str) {
 };
 
 // Put your answer below -------------------------
-var reverseStr = function(str){str.split('').reverse().join('')};
+var reverseStr = function(str){{str.split('').reverse().join('');
+  return str;
+}
+};
 
 // -----------------------------------------------
 
@@ -143,7 +146,7 @@ var spanishColor = {"rojo":"#ff0000", "blanco":"#ffffff", "azul":"#0000ff", "ver
 
 for (var prop in spanishColor) {
   console.log("Spanish color: " + prop + " = " + spanishColor[prop]);
-};
+}
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -189,11 +192,10 @@ var callNTimes = function(callback) {
   for(var i=1; i<=callback.length; i++){
     callback(x);
   }
+  var x;
 };
 
-var x = (5);
-
-console.log(callNTimes(x));
+console.log(callNTimes);
 
 // -----------------------------------------------
 
@@ -221,16 +223,19 @@ var decreaseScore = function() {
 };
 
 // Put your answer below -------------------------
-var score = [];
-
-var increaseScore = function() {
-  score[0]++;
+var score = function(increaseScore) {
+  score = 0;
+  score++;
+  return increaseScore;
 };
 
-var decreaseScore = function() {
-  score[0]--;
+var score = function(decreaseScore) {
+  score = 0;
+  score--;
+  return decreaseScore;
 };
 
+console.log(score());
 
 // -----------------------------------------------
 
@@ -253,9 +258,9 @@ var twoPlusTwo = addNumbers(2,2);
 var addNumbers = function(numberA, numberB) {
   return (numberA + numberB);
 };
-
 var twoPlusTwo = addNumbers(2,2);
-console.log(numberA + numberB);
+
+console.log(twoPlusTwo);
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -280,12 +285,16 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
-var speed = 0; //variable "amount" has not been given a value
+var speed = 0;
 
-var accelerate = function(amount=1) {
-  speed += amount;
+var accelerate = function(amount) {
+  if (amount === undefined){
+    amount = 1;
+  }
+  return speed += amount;
 };
 
+console.log(speed);
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
